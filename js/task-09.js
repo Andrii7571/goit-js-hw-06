@@ -13,7 +13,7 @@ function changeColor() {
   body.style.backgroundColor = getRandomHexColor();
 
   //    і виводить значення кольору в span.color.
-  nameColor.textContent = getRandomHexColor();
+  nameColor.textContent = body.style.backgroundColor;
 
 };
 

@@ -16,11 +16,13 @@ const images = [
 // Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
 
 const gallery = document.querySelector('.gallery');
-// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
 
-images.forEach(({ url, alt }) => {
-  const list = `<li class='js-item'><img class='js-img' src="${url}" alt="${alt}"></li>`;
 
-  //  Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
-  gallery.insertAdjacentHTML('beforeend', list);
-})
+
+const list = images.map(({ url, alt }) =>
+  `<li class='js-item'><img class='js-img' src="${url}" alt="${alt}"></li>`);
+ 
+ // Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
+
+ //  Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
+gallery.insertAdjacentHTML('beforeend', list);

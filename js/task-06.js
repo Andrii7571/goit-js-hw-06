@@ -17,6 +17,7 @@ function textInput(evt) {
     // якщо неправильна кількість - червоним.
     } else {
         input.classList.add('invalid');
+        input.classList.remove('valid')
     }
     
 };
