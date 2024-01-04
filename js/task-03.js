@@ -17,12 +17,9 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-
-
+// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
 const list = images.map(({ url, alt }) =>
-  `<li class='js-item'><img class='js-img' src="${url}" alt="${alt}"></li>`);
- 
- // Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
+  `<li class='js-item'><img class='js-img' src="${url}" alt="${alt}"></li>`).join('');
 
  //  Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
 gallery.insertAdjacentHTML('beforeend', list);
